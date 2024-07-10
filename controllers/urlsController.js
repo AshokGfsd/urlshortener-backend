@@ -64,7 +64,7 @@ const urlsController = {
       const month = today.getMonth();
       const year = today.getFullYear();
 
-      const count = await Url.countDocuments({
+      const count = await Url.find({ user: request.userId }).countDocuments({
         createdAt: {
           $gte: new Date(year, month, day),
           $lt: new Date(year, month, day + 1),
