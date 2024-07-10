@@ -6,11 +6,12 @@ const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const requestLogger = require("./utils/logger");
 const unknownEndpoint = require("./utils/Error");
+const { URL } = require("./utils/config");
 
 app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: URL,
     credentials: true,
   })
 );
