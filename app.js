@@ -11,7 +11,10 @@ const { URL } = require("./utils/config");
 app = express();
 app.use(
   cors({
-    origin: "*",
+     origin: [
+      "http://localhost:5173",
+      "https://urlshotener-frontend.vercel.app",
+    ],
     credentials: true,
   })
 );
