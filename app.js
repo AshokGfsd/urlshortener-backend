@@ -11,7 +11,7 @@ const { URL } = require("./utils/config");
 app = express();
 app.use(
   cors({
-    origin: [URL,"http://localhost:5173"],
+    origin: "*",
     credentials: true,
   })
 );
